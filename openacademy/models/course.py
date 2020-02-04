@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models #, fields, api
+from odoo import models, fields, api
 
 
 class openacademy(models.Model):
@@ -15,6 +15,8 @@ class openacademy(models.Model):
     description = fields.Html(string='Description')
     bannar = fields.Binary(string='banner')
     price = fields.Float(string='Price', digits=(5,4)) #digit=(total,decimal)
+    expire_date = fields.Date(string='Expire After', required=True)
+
 
 #     @api.depends('value')
 #     def _value_pc(self):
