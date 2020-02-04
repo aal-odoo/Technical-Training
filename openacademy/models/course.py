@@ -11,8 +11,8 @@ class OpenAcademyTags(models.Model):
 
 class openacademy(models.Model):
     #create data in the datatbase which will be name:
-    _name = 'openacademy.openacademy'
-    _description = 'openacademy.openacademy'
+    _name = 'openacademy.course'
+    _description = 'openacademy.course'
 
     name = fields.Char(string='Course Title', required=True, index=True,
                        help='Enter your course title on this field')
