@@ -3,8 +3,8 @@
 from odoo import models, fields, api
 
 class OpenAcademyTags(models.Model):
-     _name = 'openacademy.tags
-    _description = 'openacademy.tags
+     _name = 'openacademy.tags'
+    _description = 'openacademy.tags'
 
     name = fields.Char(string='Name')
     
