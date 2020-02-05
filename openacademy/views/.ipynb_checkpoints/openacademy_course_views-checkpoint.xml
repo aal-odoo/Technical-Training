@@ -10,45 +10,14 @@
             <field name="arch" type="xml">
                 <tree string="Courses">
                     <field name="name"/>
-                    <field name="active"/>
+                    <field name="active" widget="boolean_toggle"/>
                     <field name="price" optional="hide"/>
                     <field name="responsible_id"/>
                     <field name="expire_date"/>
                 </tree>
             </field>
         </record>
-       <record id="view_openacademy_course_tree" model="ir.ui.view">
-            <field name="name">view.openacademy.course.tree</field>
-            <field name="model">openacademy.course</field>
-           <field name="priority">16</field>
-            <field name="arch" type="xml">
-                <tree string="Courses" editable="top">
-                    <field name="name"/>
-                    <field name="active"/>
-                    <field name="price" optional="hide"/>
-                    <field name="responsible_id"/>
-                    <field name="expire_date"/>
-                </tree>
-            </field>
-        </record>
-
-       <record id="view_openacademy_course_form" model="ir.ui.view">
-            <field name="name">view.openacademy.course.form</field>
-            <field name="model">openacademy.course</field>
-            <field name="priority">16</field>
-            <field name="arch" type="xml">
-                <form string="Courses">
-                    <sheet>
-                        <field name="name"/>
-                        <field name="active"/>
-                        <field name="price" optional="hide"/>
-                        <field name="responsible_id"/>
-                        <field name="expire_date"/>
-                    </sheet>
-                </form>
-            </field>
-        </record>    
-    
+       
         <record model="ir.actions.act_window" id="action_openacademy_views">
             <field name="name">Courses</field>
             <field name="res_model">openacademy.course</field>
