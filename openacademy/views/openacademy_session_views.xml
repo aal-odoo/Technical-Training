@@ -7,12 +7,14 @@
            <field name="priority">16</field>
             <field name="arch" type="xml">
                 <tree string="Sessions" multi_edit="1">
+                    <field name="sequence" widget="handle"/>
                     <field name="name"/>
                     <field name="active" optional="hide"/>
                     <field name="code" />
                     <field name="start_date"/>
                     <field name="end_date" optional="hide"/>
-                    <field name="avail_seat_per"/>
+                    <field name="avail_seat_per" widget="progressbar"/>
+                    <field name="max_seats" sum="Total Max Seats"/>
                     <field name="state"/>
                 </tree>
             </field>
@@ -41,8 +43,8 @@
                                 <group name="grp_main">
                                     <group name="info1">
                                         <field name="course_id"/>
-                                        <field name="insructor_id"/>
-                                        <field name="location_id"/>
+                                        <field name="insructor_id" widget="selection"/>
+                                        <field name="location_id" required="1" options="{'no_create': true, 'no_open': true}"/>
                                         <field name="start_date"/>
                                         <field name="end_date"/>
                                     </group>
@@ -50,6 +52,7 @@
                                         <field name="code"/>
                                         <field name="max_seats"/>
                                         <field name="min_seats"/>
+                                        <field name="booked_seats"/>
                                         <field name="avail_seat_per" widget="progressbar"/>
                                     </group>
                                 </group>
@@ -68,7 +71,7 @@
             <field name="res_model">openacademy.session</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[]</field>
-            <field name="context">{}</field>
+            <field name="context">{'bypass_unlink': True}</field>
             <field name="limit">80</field>
         </record>
 
