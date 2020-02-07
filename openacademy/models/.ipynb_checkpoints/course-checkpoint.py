@@ -1,13 +1,15 @@
+ 
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields
+
 
 class OpenAcademyTags(models.Model):
     _name = 'openacademy.tags'
     _description ='OpenAcademy Tags'
 
     name = fields.Char(string='Name')
-
+    color = fields.Integer(string='Color')
     
 class OpenAcademyCourse(models.Model):
     _name = 'openacademy.course'
