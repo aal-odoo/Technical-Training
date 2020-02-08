@@ -5,7 +5,7 @@
             <field name="name">view.forum.school.tree</field>
             <field name="model">forum.school</field>
             <field name="arch" type="xml">
-                <tree string="Courses">
+                <tree string="School">
                     <field name="name"/>
                     <field name="address"/>
                     <field name="responsible_id"/>
@@ -16,8 +16,9 @@
        <record id="view_forum_school_tree" model="ir.ui.view">
             <field name="name">view.forum.school.tree</field>
             <field name="model">forum_school</field>
+            <field name="priority">16</field>
             <field name="arch" type="xml">
-                <tree string="Courses" editable="top">
+                <tree string="School" editable="top">
                     <field name="name"/>
                     <field name="adress"/>
                     <field name="responsible_id"/>
@@ -29,6 +30,7 @@
        <record id="view_forum_school_form" model="ir.ui.view">
             <field name="name">view.forum.school.form</field>
             <field name="model">forum.school</field>
+            <field name="priority">16</field>
             <field name="arch" type="xml">
                 <form string="School">
                     <sheet>
@@ -83,8 +85,6 @@
                   parent="forum_school_root"
                   action="action_forum_views"
                   name="Forum"
-                  sequence="20"/>
-        
-        
+                  sequence="20"/> 
     </data>
 </odoo>
