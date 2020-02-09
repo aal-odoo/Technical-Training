@@ -8,6 +8,6 @@ class ForumSchool(models.Model):
     _order = 'id, created_on desc'
     
     name = fields.Char(string="School Name", required=True, index=True, help='Enter your school name')
-    address = fields.Html(string="Address")
+    address = fields.Char(string="Address")
     responsible_id = fields.Many2one(comodel_name='res.users', required=True, string='Responsible', ondelete='restrict', copy=False)
     created_on = fields.Date(string='Created On', required=True)
