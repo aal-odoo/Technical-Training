@@ -12,6 +12,8 @@ class OpenacademySession(models.Model):
     duration = fields.Float(digits=(6,2), help='duration in days', default=1)
     active = fields.Boolean(default=True)
     seats = fields.Integer()
+    level = fields.Selection(related='course_id.level', readonly=True)
+
     
     taken_seats = fields.Float(compute='_compute_taken_seats', store=True) #constaint fields
     

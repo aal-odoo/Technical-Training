@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+            id="course_menu"
+            name="Courses"
+    />
+
+    <menuitem
+            id="course_menu_action"
+            name="Courses"
+            parent="openacademy.course_menu"
+            sequence="10"
+            action="openacademy_course_action"
+    />
+
+    <menuitem
+            id="session_menu_action"
+            name="Sessions"
+            parent="openacademy.course_menu"
+            sequence="20"
+            action="openacademy_session_action"
+    />
+</odoo>
